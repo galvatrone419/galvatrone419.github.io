@@ -12,7 +12,10 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="navbar">
+  <!-- Scroll progress bar -->
+  <div id="progress"></div>
+
+  <header class="navbar" id="navbar">
     <div class="container navwrap">
       <a href="#home" class="brand">
         <i data-lucide="sparkles" class="icon"></i>
@@ -32,7 +35,7 @@
   </header>
 
   <main>
-    <!-- Gradient blobs background -->
+    <!-- Gradient blobs background (parallax-ready) -->
     <div class="bg-blob blob-a"></div>
     <div class="bg-blob blob-b"></div>
 
@@ -43,7 +46,7 @@
           <h1 class="headline reveal-up">Building AI products that move the needle</h1>
           <p class="lead reveal-up delay-1">
             Senior Machine Learning Engineer specializing in recommendation systems, NLP/LLMs, computer vision, and MLOps.
-            Experienced across AWS, GCP, and Azure with a track record of shipping high‑impact systems.
+            Experienced across AWS, GCP, and Azure with a track record of shipping high-impact systems.
           </p>
           <div class="cta reveal-up delay-2">
             <a href="#contact" class="btn primary">
@@ -51,14 +54,14 @@
             </a>
             <a href="#experience" class="btn ghost">View experience</a>
           </div>
-          <div class="stats reveal-up delay-3">
-            <div class="stat-card"><div class="stat-top">5%</div><div class="stat-sub">↑ user engagement</div></div>
-            <div class="stat-card"><div class="stat-top">$100M</div><div class="stat-sub">incremental ARR</div></div>
-            <div class="stat-card"><div class="stat-top">30%</div><div class="stat-sub">manual effort ↓</div></div>
-          </div>
+          <!-- <div class="stats reveal-up delay-3">
+            <div class="stat-card tilt"><div class="stat-top">%</div><div class="stat-sub">↑ Thrive to develop</div></div>
+            <div class="stat-card tilt"><div class="stat-top">$100M</div><div class="stat-sub">incremental ARR</div></div>
+            <div class="stat-card tilt"><div class="stat-top">30%</div><div class="stat-sub">manual effort ↓</div></div>
+          </div> -->
         </div>
         <div class="hero-photo reveal-pop">
-          <div class="photo-wrap">
+          <div class="photo-wrap tilt">
             <img src="assets/profile.png" alt="Anil G" />
             <i data-lucide="stars" class="sparkle"></i>
           </div>
@@ -79,7 +82,7 @@
         </div>
 
         <div class="timeline">
-          <article class="card reveal-up">
+          <article class="card reveal-up tilt">
             <div class="card-head">
               <div>
                 <h3>Senior Data Scientist</h3>
@@ -88,8 +91,8 @@
               <span class="badge">May 2025 – Present</span>
             </div>
             <ul class="bullets">
-              <li>Built and served a scalable personalized product ranking (NBA E‑commerce) using clickstream, purchases, demographics, and engagement signals.</li>
-              <li>End‑to‑end pipelines with caching & parallelization; millions of daily requests at low latency.</li>
+              <li>Built and served a scalable personalized product ranking (NBA E-commerce) using clickstream, purchases, demographics, and engagement signals.</li>
+              <li>End-to-end pipelines with caching & parallelization; millions of daily requests at low latency.</li>
               <li>BigQuery feature eng + Vertex AI Pipelines for automated training/deploy/monitoring.</li>
               <li>Led serving pipeline, rapid experimentation & A/B testing.</li>
               <li>+5% engagement, +3% revenue per user → ~$100M incremental ARR.</li>
@@ -99,7 +102,7 @@
             </div>
           </article>
 
-          <article class="card reveal-up">
+          <article class="card reveal-up tilt">
             <div class="card-head">
               <div>
                 <h3>Machine Learning Engineer</h3>
@@ -117,7 +120,7 @@
             </div>
           </article>
 
-          <article class="card reveal-up">
+          <article class="card reveal-up tilt">
             <div class="card-head">
               <div>
                 <h3>Data Scientist</h3>
@@ -127,7 +130,7 @@
             </div>
             <ul class="bullets">
               <li>Vehicle detection & tracking (Objectra) with type tallying in real time.</li>
-              <li>Hybrid face recognition + spoof detection; voice + face 2‑factor auth.</li>
+              <li>Hybrid face recognition + spoof detection; voice + face 2-factor auth.</li>
             </ul>
             <div class="tags">
               <span class="tag">CV</span><span class="tag">DL</span><span class="tag">Edge</span><span class="tag">APIs</span><span class="tag">MEAN</span>
@@ -146,33 +149,33 @@
         </div>
 
         <div class="skills">
-          <div class="skill-card">
+          <div class="skill-card tilt">
             <span class="badge dark">Machine Learning</span>
-            <div class="marquee" data-dup="Ranking/Recsys • NLP/LLMs • Computer Vision • Deep Learning"></div>
+            <div class="marquee" data-items="Ranking/Recsys,NLP/LLMs,Computer Vision,Deep Learning"></div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card tilt">
             <span class="badge dark">MLOps</span>
-            <div class="marquee" data-dup="MLflow • Kubeflow • Airflow • Docker • Kubernetes • Seldon"></div>
+            <div class="marquee" data-items="MLflow,Kubeflow,Airflow,Docker,Kubernetes,Seldon"></div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card tilt">
             <span class="badge dark">Cloud</span>
-            <div class="marquee" data-dup="AWS (SageMaker, EKS, ECS) • GCP (BigQuery, Vertex AI, CloudBuild) • Azure"></div>
+            <div class="marquee" data-items="AWS (SageMaker, EKS, ECS),GCP (BigQuery, Vertex AI, CloudBuild),Azure"></div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card tilt">
             <span class="badge dark">Languages</span>
-            <div class="marquee" data-dup="Python • TypeScript • JavaScript • PySpark • Scala"></div>
+            <div class="marquee" data-items="Python,TypeScript,JavaScript,PySpark,Scala"></div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card tilt">
             <span class="badge dark">Databases</span>
-            <div class="marquee" data-dup="PostgreSQL • MySQL • MongoDB • Milvus Vector DB • Cassandra"></div>
+            <div class="marquee" data-items="PostgreSQL,MySQL,MongoDB,Milvus Vector DB,Cassandra"></div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card tilt">
             <span class="badge dark">Frameworks</span>
-            <div class="marquee" data-dup="Django • Flask • MERN"></div>
+            <div class="marquee" data-items="Django,Flask,MERN"></div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card tilt">
             <span class="badge dark">Search</span>
-            <div class="marquee" data-dup="Elasticsearch • OpenSearch • Solr"></div>
+            <div class="marquee" data-items="Elasticsearch,OpenSearch,Solr"></div>
           </div>
         </div>
       </div>
@@ -187,17 +190,17 @@
         </div>
 
         <div class="grid3">
-          <article class="card reveal-up">
+          <article class="card reveal-up tilt">
             <div class="edu-head">
               <i data-lucide="graduation-cap" class="icon"></i>
               <div><strong>Kakatiya University — BSE</strong><div class="muted">GPA: 7.1</div></div>
             </div>
           </article>
 
-          <article class="card reveal-up"><div class="row"><i data-lucide="award" class="icon amber"></i><p>Data Science Specialization – Coursera</p></div></article>
-          <article class="card reveal-up"><div class="row"><i data-lucide="award" class="icon amber"></i><p>Intel Edge AI Scholar</p></div></article>
-          <article class="card reveal-up"><div class="row"><i data-lucide="award" class="icon amber"></i><p>Azure Ninja Cat Badge @ WeekOfAI (Microsoft)</p></div></article>
-          <article class="card reveal-up"><div class="row"><i data-lucide="award" class="icon amber"></i><p>Professional Training: MEAN stack (Infosys), Product Development (Apple)</p></div></article>
+          <article class="card reveal-up tilt"><div class="row"><i data-lucide="award" class="icon amber"></i><p>Data Science Specialization – Coursera</p></div></article>
+          <article class="card reveal-up tilt"><div class="row"><i data-lucide="award" class="icon amber"></i><p>Intel Edge AI Scholar</p></div></article>
+          <article class="card reveal-up tilt"><div class="row"><i data-lucide="award" class="icon amber"></i><p>Azure Ninja Cat Badge @ WeekOfAI (Microsoft)</p></div></article>
+          <article class="card reveal-up tilt"><div class="row"><i data-lucide="award" class="icon amber"></i><p>Professional Training: MEAN stack (Infosys), Product Development (Apple)</p></div></article>
         </div>
       </div>
     </section>
@@ -210,7 +213,7 @@
           <h2>Contact</h2>
         </div>
 
-        <article class="card reveal-up">
+        <article class="card reveal-up tilt">
           <div class="contact-grid">
             <a class="row" href="mailto:galvatroneprime419@gmail.com"><i data-lucide="mail" class="icon indigo"></i><span>galvatroneprime419@gmail.com</span></a>
             <a class="row" href="tel:+917013162503"><i data-lucide="phone" class="icon indigo"></i><span>+91 7013162503</span></a>
@@ -230,6 +233,8 @@
       © <span id="year"></span> Anil G — Built with ❤️ HTML, CSS & JS.
     </div>
   </footer>
+
+  <button id="toTop" aria-label="Back to top">↑</button>
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="main.js"></script>
